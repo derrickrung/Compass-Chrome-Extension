@@ -17,6 +17,7 @@
   ],
   "content_scripts": [ {
     "js": [ "compass.js" ],
-    "matches": [ "http://*/*", "https://*/*"]
+    "matches": [ "http://*/*", "https://*/*"],
+    "run_at": "document_end"
   }]
 }
