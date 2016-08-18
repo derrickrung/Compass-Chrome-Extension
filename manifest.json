@@ -20,8 +20,8 @@
         "https://ajax.googleapis.com/"
     ],
     "content_scripts": [{
-        "js": [ "jquery-3.1.0.min.js", "hash.js","compass.js"],
-
+        "js": ["jquery-3.1.0.min.js", "hash.js", "compass.js"],
+        "css": ["compass.css"],
         "matches": ["http://*/*", "https://*/*"],
         "run_at": "document_end"
     }]
