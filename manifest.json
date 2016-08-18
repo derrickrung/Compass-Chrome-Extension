@@ -5,7 +5,7 @@
 
     "name": "Compass",
     "background": {
-        "scripts": ["hash.js", "jquery-3.1.0.min.js", "compass.js"]
+        "scripts": ["hash.js", "jquery-3.1.0.min.js", "compass.js", "pin_icon.png"]
     },
     "description": "This extension provides the user with directions from their current location to all locations on the webpage using the Google Maps API",
     "version": "1.0",
