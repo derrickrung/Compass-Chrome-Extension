@@ -1,3 +1,9 @@
 //compass.js
+    // console.log( "ready!" );
+    // console.log( zipHash );
 
-console.log(zipHash);
+
+$(document).ready(function() {
+    console.log( "ready!" );
+    console.log(zipHash);
+});
