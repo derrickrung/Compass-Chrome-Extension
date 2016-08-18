@@ -1,0 +1,22 @@
+//manifest
+
+{
+  "manifest_version": 2,
+
+  "name": "Compass",
+  "description": "This extension provides the user with directions from their current location to all locations on the webpage using the Google Maps API",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "compass.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [ {
+    "js": [ "compass.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
