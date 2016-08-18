@@ -1,11 +1,11 @@
-//compass.js
-    // console.log( "ready!" );
-    // console.log( zipHash );
-
-
 $(document).ready(function() {
-    console.log( "ready!" );
-    console.log(zipHash);
-});
+    findElementByText('Database Administrators');
+})
 
-$("include").append()
+
+function findElementByText(text) {  
+    var jSpot = $("*:contains(" + text + ")")      .filter(function() {
+        return $(this).children().length === 0;
+    }).parent();    
+    console.log(jSpot); 
+};
