@@ -22,17 +22,20 @@ function loopDom() {
                 
                 if (found !== -1) {
                     if (zipHash[stringd]) {
-
-                        let oString = element.innerHTML;
-                        let newStr = oString.replace(/(<([^>]+)>)/ig, "");
+            
+                        let newStr = element.innerHTML.replace(/(<([^>]+)>)/ig, "");
                         newStr = newStr.replace(/\s/g, "+");
-                        let founded = newStr.search(/\d{5}/g);
-                        let str = newStr.slice(newStr.search(/\d/), founded + 5);
+                        let start = newStr.search(/\d/);
+                        let str = newStr.slice(start);
+                        let temp = str.slice(1)
+                        let end = temp.search(/\d{5}/g)
+                        let strTwo = str.slice(5, end + 6);
+                        
+                        str = str.slice(0, 5)
+                        let cstr =  str + strTwo;
 
-                        console.log(str);
-
-                        $(element).append(`<a target="_blank" href=https://www.google.com/maps/place/` + str + ` class="compass-url"><img class="pin-icon" src="` + imgURL + `"></a>`);
-
+                        $(element).append(`<a target="_blank" href=https://www.google.com/maps/place/` + cstr + ` class="compass-url"><img class="pin-icon" src="` + imgURL + `"></a>`);
+                        j = element.childNodes.length;
                     }
                 }
             };
